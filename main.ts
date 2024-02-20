@@ -156,7 +156,6 @@ guests.forEach((guests) => {
 });
 //~done
 
-
 //? 17. Shrinking Guest List: You just found out that your new dinner table won’t arrive in time for the dinner, and you have space for only two guests.
 //*• Start with your program from Exercise 16. Add a new line that prints a message saying that you can invite only two people for dinner.
 
@@ -431,13 +430,13 @@ let age = 25;
 //• If the person is less than 2 years old, print a message that the person is a baby.
 if (age <= 2) {
   console.log("this person is a baby");
-} else if (age <= 4 ) {
+} else if (age <= 4) {
   console.log("this person is a toddler");
 } else if (age < 13) {
   console.log("this person is a kid");
-} else if (age < 20 ) {
+} else if (age < 20) {
   console.log("this person is a teenager");
-} else if (age < 65 ) {
+} else if (age < 65) {
   console.log("this person is an adult");
 } else {
   console.log("this person is an elder");
@@ -515,7 +514,9 @@ let new_users = ["Daniyal_nagori", "sir_zya", "ali", "mazz", "khalid"];
 
 for (let new_user of new_users) {
   if (current_users.includes(new_user.toLowerCase())) {
-    console.log(`${new_user} username is not available you will need to enter a new username`);
+    console.log(
+      `${new_user} username is not available you will need to enter a new username`
+    );
   } else {
     console.log(`${new_user} username is available`);
   }
@@ -689,8 +690,5 @@ function myCars(manufacturer, model_name) {
 }
 const modified = myCars(`"lamborghini" "aventandor"`);
 console.log(modified);
-
-
-
 
 //&                  ALHAMDULILLAH DONE

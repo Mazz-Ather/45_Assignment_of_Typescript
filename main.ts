@@ -7,8 +7,8 @@
 // ~ DONE
 
 //? 2. Personal Message: Store a person’s name in a variable, and print a message to that person. Your message should be simple, such as, “Hello Eric, would you like to learn some Python today?”
-let name = "Mazz";
-let message = `Hello, ${name} Would You Like To Learn Typescript`;
+const myName = "Mazz ather";
+let message = `Hello, ${myName} Would You Like To Learn Typescript`;
 console.log(message);
 //~ DONE
 
@@ -33,9 +33,10 @@ console.log(`The Legend ${famous_person} said, "${msg}"`);
 //~ DONE
 
 //? 6. Stripping Names: Store a person’s name, and include some whitespace characters at the beginning and end of the name. Make sure you use each character combination, "\t" and "\n", at least once. Print the name once, so the whitespace around the name is displayed. Then print the name after striping the white spaces
-personName = "\tMuhammad Tahir\t";
+let personName = "\tMuhammad \n Tahir\t";
 console.log(personName);
-console.log(personName.trim());
+let newName = personName.trim().split("\n").join("");
+console.log(newName);
 // ~done
 
 //?  7. Number Eight: Write addition, subtraction, multiplication, and division operations that each result in the number 8. Be sure to enclose your operations in print statements to see the results.
@@ -71,11 +72,10 @@ console.log(fullName.charAt(0).toUpperCase() + fullName.slice(1));*/
 
 //?11. Names: Store the names of a few of your friends in a array called names. Print each person’s name by accessing each element in the list, one at a time.
 let Names = ["ali", "Asad", "Zaid", "Junaid", "Saqib"];
-console.log(Names[0]);
-console.log(Names[1]);
-console.log(Names[2]);
-console.log(Names[3]);
-console.log(Names[4]);
+for (let i = 0 ; i < Names.length ; i ++){
+  console.log(Names[i]);
+  
+}
 //~done
 
 //?12. Greetings: Start with the array you used in Exercise 11, but instead of just printing each person’s name, print a message to them. The text of each message should be the same, but each message should be personalized with the person’s name.
@@ -92,7 +92,7 @@ for (let i = 0; i < myFriends.length; i++) {
 let car = ["lambo", "BMW", "Bugatti", "ferrari"];
 let list = ["v10engine", "luxurious interior design", "unmatched speed"];
 for (let i = 1; i < car.length; i++) {
-  console.log(`i would like to own a ${car[0]} because she has ${list}`);
+  console.log(`i would like to own a ${car[0]} because she has ${list[0]}`);
 }
 //~done
 
@@ -164,6 +164,7 @@ console.log(
 );
 
 //*• Remove guests from your list one at a time until only two names remain in your list. Each time you pop a name from your list, print a message to that person letting them know you’re sorry you can’t invite them to dinner.
+
 guests.shift(0);
 console.log(guests);
 console.log(`I'm so sorry, but i can not invite you ${guests[0]}`);
@@ -225,17 +226,17 @@ let reverse = [...DreamPlaces].reverse();
 console.log(reverse);
 
 // • Sort your array so it’s stored in alphabetical order. Print the array to show that its order has been changed.
-let alphaet = [...DreamPlaces].sort();
-console.log(alphaet);
+let alphabet = [...DreamPlaces].sort();
+console.log(alphabet);
 
 // • Sort to change your array so it’s stored in reverse alphabetical order. Print the list to show that its order has changed.
-let unalphabet = [...DreamPlaces].sort().reverse();
-console.log(unalphabet);
+let rev = [...DreamPlaces].sort().reverse();
+console.log(rev);
 //~done
 
 //?19. Dinner Guests: Working with one of the programs from Exercises 14 through 18, print a message indicating the number of people you are inviting to dinner.
-let totalpplz = `i invited no one because in the end i removed all of them ${guests}`;
-console.log(totalpplz);
+let people = `i invited no one because in the end i removed all of them ${guests}`;
+console.log(people);
 //~done
 
 // 20. Think of something you could store in a array. For example, you could make a list of mountains, rivers, countries, cities, languages, or anything else you’d like. Write a program that creates a list containing these items.
@@ -251,19 +252,20 @@ console.log(countries);
 
 // 21. They think of something you could store in a TypeScript Object. Write a program that creates Objects containing these items.
 let languages = {
-  english: "to unlock unlimited opprtunities",
-  spainish: "most spoken language in the world",
-  araic: "our most beloved language",
-  chinnese: "hardest language",
+  english: "to unlock unlimited opportunities",
+  spanish: "most spoken language in the world",
+  arabic: "our most beloved language",
+  chinese: "hardest language",
 };
 console.log(languages);
 //~done
 
-// 22. Intentional Error: If you haven’t received an array index error in one of your programs yet, try to make one happen. Change an index in one of your programs to produce an index error. Make sure you correct the error before closing the program.
+// 22. Intentional Error: If you haven’t received an array index error in one of your programs yet, try to make one happen. Change an index in one of your programs to produce an index error. 
 
 let Places = ["islamabad", "Edinburg", "melbourne", "london", "palestine"];
 console.log(Places[5]); //! it cause index error
 
+// Make sure you correct the error before closing the program.
 let places = [
   "islamabad",
   "Edinburg",
@@ -482,10 +484,10 @@ if (favorite_fruits.includes("apple")) {
 
 let usernames = [
   "admin",
-  "mazz_ather@",
-  "muhammadtahir123",
+  "maaz_ather@",
+  "muhammad_tahir123",
   "ueditz143",
-  "sqmaaz@",
+  "sqbmaaz@",
   "imrankhanniazi",
 ];
 for (let username of usernames) {
@@ -516,7 +518,7 @@ for (let new_user of new_users) {
   if (current_users.includes(new_user.toLowerCase())) {
     console.log(
       `${new_user} username is not available you will need to enter a new username`
-    );
+    )
   } else {
     console.log(`${new_user} username is available`);
   }
@@ -545,7 +547,7 @@ for (const number of numbers) {
 
 //? 34. Pizzas: Think of at least three kinds of your favorite pizza. Store these pizza names in a array, and then use a for loop to print the name of each pizza.
 
-let pizzas = ["fajita", "bbq", "chicken"];
+let pizzas = ["fajita", "bbq", "pepperoni"];
 for (let i = 1; i <= 1; i++) {
   console.log(pizzas);
 }
@@ -606,7 +608,7 @@ function describe_city(city, country = "Pakistan") {
 }
 describe_city("Karachi");
 describe_city("Moscow", "Russia");
-describe_city("Sydney", "Austrailia");
+describe_city("Sydney", "Australia");
 //~done
 
 // ? 39. City Names: Write a function called city_country() that takes in the name of a city and its country. The function should return a string formatted like this: "Lahore, Pakistan" Call your function with at least three city-country pairs, and print the value that’s returned.
@@ -623,8 +625,8 @@ console.log(romeItaly);
 console.log(londonEngland);
 //~done
 
-//? 40. Album: Write a function called make_album() that builds a Objectdescribing a music album. The function should take in an artist name and an album title, and it should return a Object containing these two pieces of information. Use the function to make three dictionaries representing different albums. Print each return value to show that Objects are storing the album information correctly. Add an optional parameter to make_album() that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.
-
+//? 40. Album: Write a function called make_album() that builds a Object describing a music album. The function should take in an artist name and an album title, and it should return a Object containing these two pieces of information. Use the function to make three dictionaries representing different albums. Print each return value to show that Objects are storing the album information correctly. Add an optional parameter to make_album() that allows you to store the number of tracks on an album. If the calling line includes a value for the number of tracks, add that value to the album’s Object. Make at least one new function call that includes the number of tracks on an album.
+////do not understand the question correctly
 function make_album(artist, title) {
   return `${artist} ${title}`;
 }
@@ -639,7 +641,7 @@ console.log(album3);
 // ? 41. Magicians: Make a array of magician’s names. Pass the array to a function called show_magicians(), which prints the name of each magician in the array.
 
 let magician_names = ["A.K Mujahid", "simon", "david", "helen"];
-function show_magicians(magician_names) {
+function showMagicians (magician_names) {
   for (let i = 1; i < magician_names.length; i++) {
     return;
   }
@@ -675,7 +677,7 @@ console.log(newArr);
 
 //? 44. Sandwiches: Write a function that accepts a array of items a person wants on a sandwich. The function should have one parameter that collects as many items as the function call provides, and it should print a summary of the sandwich that is being ordered. Call the function three times, using a different number of arguments each time.
 
-function sandwhich(items) {
+function sandwhich(items:any) {
   console.log(items.length ? items : nothing);
 }
 sandwhich((items = "bread" + " beef"));
